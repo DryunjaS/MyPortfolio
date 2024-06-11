@@ -1,0 +1,80 @@
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: roboto;
+}
+ul {
+	padding: 0;
+}
+body {
+	background-color: #22313f;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+}
+
+.fp-watermark,
+.fp-arrow,
+.fp-right {
+	display: none;
+}
+.fp-slidesContainer {
+	.hideItem {
+		width: 0 !important;
+	}
+}
+.carousel .carousel-inner {
+	width: 800px !important;
+	height: 400px !important;
+	margin: 0 auto;
+	> * {
+		height: 100%;
+	}
+}
+@media (max-width: 1450px) {
+	.section-about > :nth-child(4) {
+		margin-top: -170px;
+	}
+}
+@media (max-width: 1120px) {
+	.section-about > :nth-child(1) {
+		margin-top: 0px;
+	}
+	.section-about > :nth-child(2) {
+		margin-top: 100px;
+	}
+	.section-about > :nth-child(3) {
+		margin-top: -100px;
+	}
+	.section-about > :nth-child(4) {
+		margin-top: 40px;
+	}
+}
+@media (max-width: 800px) {
+	.section-about {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.section-about > :nth-child(1) {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	.section-about > :nth-child(2) {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	.section-about > :nth-child(3) {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	.section-about > :nth-child(4) {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+}
