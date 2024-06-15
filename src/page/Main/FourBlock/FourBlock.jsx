@@ -6,7 +6,9 @@ const FourBlock = () => {
 	return (
 		<div className={style.wrapper}>
 			<div className={style.content}>
-				<div class={`${style.ratio} ${style.title}`}>Fullstack</div>
+				<div class={style.title}>
+					<div class={style.ratio}>Fullstack</div>
+				</div>
 
 				<div className={style.scaledСontainer}>
 					<Birds />

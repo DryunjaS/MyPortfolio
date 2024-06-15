@@ -1,8 +1,29 @@
 import style from "./appbar.module.scss"
+import { useNavigate } from "react-router-dom"
 
-const NavBar = ({ fullpageApi, currentSlide, currentPage }) => {
+const NavBar = ({ fullpageApi, currentSlide, currentPage, menuItemsValue }) => {
 	const pageItems = ["Главная", "Проекты", "Навыки", "Контакты"]
-	const menuItems = ["Приветствие", "FrontEnd", "BackEnd", "FullStack"]
+	const menuItems = menuItemsValue
+	const navigate = useNavigate()
+
+	const handleLink = (link) => {
+		switch (link) {
+			case "Главная":
+				navigate("/")
+				break
+			case "Проекты":
+				navigate("/project")
+				break
+			case "Навыки":
+				navigate("/skills")
+				break
+			case "Контакты":
+				navigate("/contacts")
+				break
+			default:
+				navigate("/")
+		}
+	}
 
 	return (
 		<div className={style.navBar}>
@@ -15,7 +36,7 @@ const NavBar = ({ fullpageApi, currentSlide, currentPage }) => {
 								? `${style.pageItem} ${style.pageItemisCurrent}`
 								: `${style.pageItem}`
 						}`}
-						onClick={() => fullpageApi.moveTo(el)}
+						onClick={() => handleLink(el)}
 					>
 						{el}
 					</li>

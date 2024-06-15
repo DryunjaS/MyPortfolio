@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import style from "./main.module.scss"
 import Typewriter from "../../../components/Typewriter/Typewriter"
 import gsap from "gsap"

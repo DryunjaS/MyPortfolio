@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 import NavBar from "../components/AppBar/AppBar"
-import FirstBlock from "./Main/FirstBlock/FirstBlock"
-import SecondBlock from "./Main/SecondBlock/SecondBlock"
-import ThreeBlock from "./Main/ThreeBlock/ThreeBlock"
-import FourBlock from "./Main/FourBlock/FourBlock"
+import FirstProject from "./Project/FirstProgect/FirstProject"
+import SecondProject from "./Project/SecondProject/SecondProject"
+import ThreeProject from "./Project/ThreeProject/ThreeProject"
+import FourProject from "./Project/FourProject/FourProject"
+import FiveProject from "./Project/FiveProject/FiveProject"
 
 const SEL = "custom-section"
 const SECTION_SEL = `.${SEL}`
 
 const originalColors = ["#22313f", "#22313f", "#22313f", "#22313f"]
 
-const MainPage = () => {
+const ProjectPage = () => {
 	const [sectionsColor, setSectionsColor] = useState([...originalColors])
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const [fullpageApi, setFullpageApi] = useState(null)
-	const [currentPage, setCurrentPage] = useState("Главная")
+	const [currentPage, setCurrentPage] = useState("Проекты")
 
 	useEffect(() => {
 		if (fullpageApi) {
@@ -29,13 +30,13 @@ const MainPage = () => {
 				currentSlide={currentSlide}
 				fullpageApi={fullpageApi}
 				currentPage={currentPage}
-				menuItemsValue={["Приветствие", "FrontEnd", "BackEnd", "FullStack"]}
+				menuItemsValue={["Проект1", "Проект2", "Проект3", "Проект4", "Проект5"]}
 			/>
 			<ReactFullpage
 				debug
 				licenseKey={"YOUR_KEY_HERE"}
 				navigation
-				anchors={["Приветствие", "FrontEnd", "BackEnd", "FullStack"]}
+				anchors={["Проект1", "Проект2", "Проект3", "Проект4", "Проект5"]}
 				sectionSelector={SECTION_SEL}
 				onLeave={(origin, destination, direction) => {
 					setCurrentSlide(destination.index)
@@ -47,23 +48,28 @@ const MainPage = () => {
 						<ReactFullpage.Wrapper>
 							<div className={SEL}>
 								<div className='slide'>
-									<FirstBlock />
+									<FirstProject />
 								</div>
 							</div>
 
 							<div className={SEL}>
-								<div className='slide hideItem'>
-									<SecondBlock />
+								<div className='slide'>
+									<SecondProject />
 								</div>
 							</div>
 							<div className={SEL}>
 								<div className='slide'>
-									<ThreeBlock />
+									<ThreeProject />
 								</div>
 							</div>
 							<div className={SEL}>
 								<div className='slide'>
-									<FourBlock />
+									<FourProject />
+								</div>
+							</div>
+							<div className={SEL}>
+								<div className='slide'>
+									<FiveProject />
 								</div>
 							</div>
 						</ReactFullpage.Wrapper>
@@ -74,4 +80,4 @@ const MainPage = () => {
 	)
 }
 
-export default MainPage
+export default ProjectPage
