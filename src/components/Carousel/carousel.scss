@@ -1,0 +1,39 @@
+:root {
+	--index: calc(1vw + 1vh);
+}
+.blockquote {
+	position: absolute;
+	top: 100px;
+	text-align: center;
+	color: #dbdbdb;
+	display: none;
+	font-style: italic;
+}
+.carousel-item-video {
+	position: absolute;
+	bottom: 50px;
+	width: calc(var(--index) * 25);
+	height: calc(var(--index) * 15);
+	border-radius: 8px;
+	display: none;
+}
+@media (max-width: 611px) {
+	.carousel-inner {
+		max-width: 90vw;
+	}
+	canvas {
+		height: 700px;
+	}
+}
+@media (max-width: 520px) {
+	.carousel-inner {
+		max-width: 90vw;
+	}
+	canvas {
+		height: 700px;
+	}
+	.blockquote,
+	.carousel-item-video {
+		display: block;
+	}
+}

@@ -30,11 +30,14 @@ body {
 	}
 }
 .carousel .carousel-inner {
-	width: 800px !important;
-	height: 400px !important;
+	width: calc(var(--index) * 37) !important;
 	margin: 0 auto;
-	> * {
-		height: 100%;
+	border-radius: 16px;
+
+	.carousel-caption {
+		position: absolute;
+		bottom: -27px;
+		font-size: 14px;
 	}
 }
 @media (max-width: 1450px) {

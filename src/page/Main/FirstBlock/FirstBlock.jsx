@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import style from "./main.module.scss"
-import Typewriter from "../../components/Typewriter/Typewriter"
+import Typewriter from "../../../components/Typewriter/Typewriter"
 import gsap from "gsap"
 
 const FirstBlock = () => {
@@ -20,16 +20,16 @@ const FirstBlock = () => {
 		}
 	)
 	return (
-		<div className={style.mainFirstBlock}>
+		<div className={style.wrapper}>
 			<div className={style.content}>
 				<div className={style.left}>
 					<img src='/images/my-foto.jpg' alt='my-foto' className='myFoto' />
 				</div>
 				<div className={style.right}>
-					<h2 className={style.title}>
+					<h1 className={style.title}>
 						Добро{" "}
 						<Typewriter text='пожаловать на мой сайт портфолио!' delay={30} />
-					</h2>
+					</h1>
 					<div className={style.text}>
 						Я fullstack web-разваботчик. Занимаюсь созданием сайтов и
 						кросс-платформенных web-приложений на языке JavaScript

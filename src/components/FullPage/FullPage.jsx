@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
-import ActionAreaCard from "../Card/Card"
-import store from "../../store/store"
-import FirstBlock from "../../page/Main/FirstBlock"
+import FirstBlock from "../../page/Main/FirstBlock/FirstBlock"
 import NavBar from "../AppBar/AppBar"
-import SecondBlock from "../../page/Main/SecondBlock"
+import SecondBlock from "../../page/Main/SecondBlock/SecondBlock"
+import ThreeBlock from "../../page/Main/ThreeBlock/ThreeBlock"
+import FourBlock from "../../page/Main/FourBlock/FourBlock"
 
 const SEL = "custom-section"
 const SECTION_SEL = `.${SEL}`
@@ -57,12 +57,12 @@ const FullPage = () => {
 							</div>
 							<div className={SEL}>
 								<div className='slide'>
-									<ActionAreaCard value={store.cards[2]} />
+									<ThreeBlock />
 								</div>
 							</div>
 							<div className={SEL}>
 								<div className='slide'>
-									<SecondBlock />
+									<FourBlock />
 								</div>
 							</div>
 						</ReactFullpage.Wrapper>

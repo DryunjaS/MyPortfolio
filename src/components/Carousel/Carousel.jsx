@@ -1,27 +1,57 @@
 import Carousel from "react-bootstrap/Carousel"
-import ActionAreaCard from "../Card/Card"
-import store from "../../store/store"
+import MyChart from "../Chart/Chart"
+import "./carousel.scss"
 
-const MyCarousel = () => {
+function MyCarousel() {
 	return (
-		<Carousel>
-			<Carousel.Item>
-				<Carousel.Caption>
-					{/* <ActionAreaCard value={store.cards[3]} /> */}
-					<img src='/images/frontend.jpg' alt='' />
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<Carousel.Caption>
-					<img src='/images/frontend.jpg' alt='' />
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<Carousel.Caption>
-					<img src='/images/frontend.jpg' alt='' />
-				</Carousel.Caption>
-			</Carousel.Item>
-		</Carousel>
+		<>
+			<blockquote contenteditable='true' className='blockquote'>
+				<q>
+					И запомни, в скрипке самое главное это лак, а как она играет это уже
+					другое дело
+				</q>
+				<br />
+				<cite>Это и есть суть Frontend</cite>
+			</blockquote>
+			<Carousel data-bs-theme='light'>
+				<Carousel.Item>
+					<img
+						className='d-block w-100'
+						src='/images/frontend-3.jpg'
+						alt='First slide'
+					/>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img
+						className='d-block w-100'
+						src='/images/frontend-6.jpg'
+						alt='First slide'
+					/>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img
+						className='d-block w-100'
+						src='/images/frontend.jpg'
+						alt='First slide'
+					/>
+				</Carousel.Item>
+
+				<Carousel.Item>
+					<img
+						className='d-block w-100'
+						src='/images/react.jpg'
+						alt='Third slide'
+					/>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img
+						className='d-block w-100'
+						src='/images/frontend-5.jpg'
+						alt='Third slide'
+					/>
+				</Carousel.Item>
+			</Carousel>
+		</>
 	)
 }
 

@@ -1,0 +1,27 @@
+:root {
+	--index: calc(1vw + 1vh);
+}
+.card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #dbdbdb;
+	border-radius: 8px;
+	width: calc(var(--index) * 19);
+	height: calc(var(--index) * 8);
+}
+.left {
+	width: calc(var(--index) * 5);
+	height: calc(var(--index) * 8);
+	display: flex;
+	align-items: center;
+	padding: 0 5px;
+	font-size: calc(var(--index) * 0.7);
+}
+.right img {
+	width: calc(var(--index) * 13);
+	height: calc(var(--index) * 8);
+
+	text-align: start;
+	border-radius: 0 8px 8px 0;
+}

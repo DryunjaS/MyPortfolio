@@ -1,0 +1,87 @@
+:root {
+	--index: calc(1vw + 1vh);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+.content {
+	width: 70vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	column-gap: 30px;
+}
+
+.scaledСontainer {
+	position: absolute;
+	bottom: 20px;
+	transform: scale(1);
+	transition: transform 0.3s ease;
+}
+
+.ratio {
+	text-align: center;
+	font-family: "Catamaran", sans-serif;
+	letter-spacing: 20px;
+	font-weight: 900;
+	max-width: 800px;
+	display: block;
+	font-size: calc(var(--index) * 7);
+	color: rgba(95, 192, 254, 0.6);
+	text-shadow: -14px 14px 0 rgba(50, 153, 240, 0.4), -1px 1px 0 #0372b8,
+		-2px 2px 0 #0372b8, -3px 3px 0 #0372b8, -4px 4px 0 #0372b8,
+		-5px 5px 0 #0372b8, -6px 6px 0 #0372b8, -7px 7px 0 #0372b8,
+		-8px 8px 0 #0372b8, -9px 9px 0 #0372b8, -10px 10px 0 #0372b8,
+		-11px 11px 0 #0372b8, -12px 12px 0 #0372b8, -13px 13px 0 #0372b8,
+		-14px 14px 0 #0372b8, -15px 15px 35px rgba(0, 0, 0, 0.2),
+		-35px 15px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.1s;
+	line-height: 240px;
+}
+.title {
+	position: absolute;
+	top: 10%;
+	left: 17%;
+}
+.itemWrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 75%;
+	display: flex;
+	justify-content: space-around;
+	> * {
+		font-size: calc(var(--index) * 3);
+	}
+}
+
+/* ----------------------------- */
+
+@media (max-width: 1265px) {
+	.scaledСontainer {
+		transform: scale(0.8);
+	}
+}
+
+@media (max-width: 945px) {
+	.scaledСontainer {
+		transform: scale(0.6);
+	}
+}
+
+@media (max-width: 611px) {
+	.scaledСontainer {
+		transform: scale(0.4);
+	}
+}
+
+@media (max-width: 579px) {
+	.secondTitle {
+		display: block;
+	}
+}

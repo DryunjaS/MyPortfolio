@@ -69,8 +69,14 @@
 		margin-top: 10px;
 		height: 100px;
 	}
+	.navMenu,
+	.pageMenu {
+		justify-content: space-around;
+		column-gap: 10px;
+		width: 100%;
+	}
 }
-@media (max-width: 550px) {
+@media (max-width: 520px) {
 	.navMenu,
 	.pageMenu {
 		opacity: 0;
