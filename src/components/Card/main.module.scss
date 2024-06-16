@@ -1,0 +1,37 @@
+:root {
+	--index: calc(1vw + 1vh);
+}
+.wrapper {
+	max-width: calc(var(--index) * 22);
+}
+.content {
+	height: calc(var(--index) * 10);
+}
+.title {
+	font-size: calc(var(--index) * 1.5);
+}
+.text {
+	font-size: calc(var(--index) * 0.8);
+}
+.btn {
+	font-size: calc(var(--index) * 1) !important;
+}
+// --------width---------
+@media (max-width: 700px) {
+	.title {
+		font-size: calc(var(--index) * 1.2) !important;
+	}
+	.text {
+		font-size: calc(var(--index) * 0.8) !important;
+	}
+	.wrapper {
+		max-width: calc(var(--index) * 25);
+		margin: 0 auto;
+	}
+	.body {
+		padding: 5px !important;
+	}
+	.btnWrapp {
+		padding: 0px !important;
+	}
+}

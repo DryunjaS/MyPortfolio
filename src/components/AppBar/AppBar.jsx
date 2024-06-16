@@ -1,7 +1,14 @@
+import { useEffect } from "react"
 import style from "./appbar.module.scss"
 import { useNavigate } from "react-router-dom"
 
-const NavBar = ({ fullpageApi, currentSlide, currentPage, menuItemsValue }) => {
+const NavBar = ({
+	fullpageApi,
+	currentSlide,
+	setCurrentSlide,
+	currentPage,
+	menuItemsValue,
+}) => {
 	const pageItems = ["Главная", "Проекты", "Навыки", "Контакты"]
 	const menuItems = menuItemsValue
 	const navigate = useNavigate()
@@ -23,8 +30,11 @@ const NavBar = ({ fullpageApi, currentSlide, currentPage, menuItemsValue }) => {
 			default:
 				navigate("/")
 		}
+		setCurrentSlide(0)
 	}
-
+	useEffect(() => {
+		console.log(currentSlide)
+	}, [currentSlide])
 	return (
 		<div className={style.navBar}>
 			<ul className={style.pageMenu}>

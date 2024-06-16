@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import ReactFullpage from "@fullpage/react-fullpage"
 import NavBar from "../components/AppBar/AppBar"
-import FirstProject from "./Project/FirstProgect/FirstProject"
-import SecondProject from "./Project/SecondProject/SecondProject"
-import ThreeProject from "./Project/ThreeProject/ThreeProject"
-import FourProject from "./Project/FourProject/FourProject"
-import FiveProject from "./Project/FiveProject/FiveProject"
+import FirstProject from "./Project/FirstProject"
+import SecondProject from "./Project/SecondProject"
+import ThreeProject from "./Project/ThreeProject"
+import FourProject from "./Project/FourProject"
+import FiveProject from "./Project/FiveProject"
 
 const SEL = "custom-section"
 const SECTION_SEL = `.${SEL}`
@@ -28,6 +28,7 @@ const ProjectPage = () => {
 		<div className='App'>
 			<NavBar
 				currentSlide={currentSlide}
+				setCurrentSlide={setCurrentSlide}
 				fullpageApi={fullpageApi}
 				currentPage={currentPage}
 				menuItemsValue={["Проект1", "Проект2", "Проект3", "Проект4", "Проект5"]}

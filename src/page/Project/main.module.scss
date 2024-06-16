@@ -11,24 +11,13 @@
 }
 .content {
 	width: 80%;
-	margin: 0 auto;
+	height: 100vh;
+	margin: 50px auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	column-gap: 30px;
-}
-.left {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 40vw;
-	img {
-		width: calc(var(--index) * 12);
-		height: calc(var(--index) * 15);
-		border-radius: 8px;
-		min-width: 270px;
-		min-height: 350px;
-	}
+	overflow: hidden;
 }
 .right {
 	width: max-content;
@@ -38,15 +27,45 @@
 .card {
 	width: max-content;
 	border-radius: 4px;
-
 	img {
 		width: calc(var(--index) * 16);
 		border-radius: 4px;
+		max-height: 170px;
 	}
 }
 
 @for $i from 1 through 20 {
 	.card:nth-child(#{$i}) {
 		rotate: $i + 2deg;
+	}
+}
+@media (max-width: 470px) {
+	.content {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.left {
+		width: 80vw;
+	}
+	.right {
+		margin-top: 30px;
+		width: calc(var(--index) * 25);
+	}
+	.card {
+		margin: 0 auto;
+		img {
+			margin-bottom: -15px;
+
+			width: calc(var(--index) * 20);
+		}
+	}
+}
+// -----------------
+@media (max-height: 700px) {
+	.card {
+		margin: 0 auto;
+		img {
+			width: calc(var(--index) * 20);
+		}
 	}
 }
