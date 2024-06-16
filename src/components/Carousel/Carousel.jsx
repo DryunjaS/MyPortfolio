@@ -24,6 +24,13 @@ function MyCarousel() {
 				<Carousel.Item>
 					<img
 						className='d-block w-100'
+						src='/images/frontend-2.jpg'
+						alt='First slide'
+					/>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img
+						className='d-block w-100'
 						src='/images/frontend-6.jpg'
 						alt='First slide'
 					/>
@@ -43,6 +50,7 @@ function MyCarousel() {
 						alt='Third slide'
 					/>
 				</Carousel.Item>
+
 				<Carousel.Item>
 					<img
 						className='d-block w-100'

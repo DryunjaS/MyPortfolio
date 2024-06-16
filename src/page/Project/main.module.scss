@@ -10,23 +10,28 @@
 	width: 100vw;
 }
 .content {
-	width: 80%;
+	width: 90%;
 	height: 100vh;
-	margin: 50px auto;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	column-gap: 30px;
 	overflow: hidden;
 }
+.left {
+	height: max-content;
+}
 .right {
-	width: max-content;
+	padding-right: 30px;
 	margin-top: 50px;
 }
 
 .card {
 	width: max-content;
+
 	border-radius: 4px;
+	margin-left: auto;
 	img {
 		width: calc(var(--index) * 16);
 		border-radius: 4px;
@@ -39,6 +44,7 @@
 		rotate: $i + 2deg;
 	}
 }
+
 @media (max-width: 470px) {
 	.content {
 		flex-direction: column;
@@ -50,6 +56,7 @@
 	.right {
 		margin-top: 30px;
 		width: calc(var(--index) * 25);
+		padding-right: 0;
 	}
 	.card {
 		margin: 0 auto;

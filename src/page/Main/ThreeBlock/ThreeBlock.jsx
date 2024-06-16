@@ -91,6 +91,10 @@ const ThreeBlock = () => {
 			<div className={style.content}>
 				<div className={style.threeLeft}>
 					<div className={style.threeLeftText}>
+						<h3 className={style.threeLeftTitle}>
+							Модень клиент-серверного взаимодействия
+						</h3>
+
 						<div className={style.slideContainer}>
 							<div className={style.threeLeftSlide}>
 								Этап {currentIndex + 1}
