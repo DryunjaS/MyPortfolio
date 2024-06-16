@@ -1,6 +1,8 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import style from "./appbar.module.scss"
 import { useNavigate } from "react-router-dom"
+import MenuIcon from "@mui/icons-material/Menu"
+import CloseIcon from "@mui/icons-material/Close"
 
 const NavBar = ({
 	fullpageApi,
@@ -12,6 +14,11 @@ const NavBar = ({
 	const pageItems = ["Главная", "Проекты", "Навыки", "Контакты"]
 	const menuItems = menuItemsValue
 	const navigate = useNavigate()
+	const [isActive, setIsActive] = useState(false)
+
+	const toggleIsActive = () => {
+		setIsActive(!isActive)
+	}
 
 	const handleLink = (link) => {
 		switch (link) {
@@ -32,12 +39,20 @@ const NavBar = ({
 		}
 		setCurrentSlide(0)
 	}
-	useEffect(() => {
-		console.log(currentSlide)
-	}, [currentSlide])
+
 	return (
-		<div className={style.navBar}>
-			<ul className={style.pageMenu}>
+		<div
+			className={
+				isActive ? `${style.navBar} ${style.navBarActive}` : style.navBar
+			}
+		>
+			<ul
+				className={
+					isActive
+						? `${style.pageMenu} ${style.pageMenuActive}`
+						: style.pageMenu
+				}
+			>
 				{pageItems.map((el, index) => (
 					<li
 						key={index}
@@ -52,7 +67,12 @@ const NavBar = ({
 					</li>
 				))}
 			</ul>
-			<ul className={style.navMenu}>
+			<ul
+				className={
+					isActive ? `${style.navMenu} ${style.navMenuActive}` : style.navMenu
+				}
+				onClick={toggleIsActive}
+			>
 				{menuItems.map((el, index) => (
 					<li
 						key={index}
@@ -67,6 +87,10 @@ const NavBar = ({
 					</li>
 				))}
 			</ul>
+
+			<button className={style.burgerMune} onClick={toggleIsActive}>
+				{isActive ? <CloseIcon /> : <MenuIcon />}
+			</button>
 		</div>
 	)
 }
